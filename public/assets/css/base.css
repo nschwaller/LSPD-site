@@ -1,0 +1,23 @@
+ul {
+    color: white;
+}
+
+nav{
+    margin-bottom: 15px;
+}
+
+body{
+    background-color: #1F2937;
+    color: white;
+}
+
+.tableEffectif{
+    width: 95%;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.service{
+    background-color: #0d5e42;
+}

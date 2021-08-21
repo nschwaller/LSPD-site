@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Effectif{% endblock %}
+
+{% block body %}
+    {% if effectif|length > 0 %}
+        <table class="table table-dark tableEffectif">
+            <thead>
+            <tr>
+                <th scope="col">Matricule</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in effectif %}
+
+            {% if user.service == true %}
+                <tr class="service">
+                    <td>{{ user.matricule }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.grade }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>{{ user.matricule }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.grade }}</td>
+                </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
